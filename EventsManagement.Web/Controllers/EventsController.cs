@@ -1,4 +1,5 @@
 ﻿using EventsManagement.Web.Mapper;
+using EventsManagement.Web.Request;
 using EventsManagement.Web.Response;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,5 +36,11 @@ public class EventsController : ControllerBase
         return Ok(result);
     }
     
+    [HttpGet("paged")]
+    public async Task<PaginatedResponse<EventResponse>> Paged([FromQuery] PaginatedRequest request)
+    {
+        return await _eventMapper.PaginatedGetAllAsync(request);
+    }
+
     
 }

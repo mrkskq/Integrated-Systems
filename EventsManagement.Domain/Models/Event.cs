@@ -12,12 +12,12 @@ public class Event : BaseEntity
     public EventStatus Status { get; set; }
     public string? BannerUrl { get; set; }
     
-    public Guid VenueId { get; set; }
-    public Venue Venue { get; set; } = null!;
+    public Guid? VenueId { get; set; }
+    public virtual Venue Venue { get; set; } = null!;
     
     // key kaj User po default e string ne e Guid, vo IdentityUser
-    public string UserId { get; set; }
-    public EventsAppUser User { get; set; } = null!;
+    public string? UserId { get; set; }
+    public virtual EventsAppUser User { get; set; } = null!;
     
     public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
     public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();

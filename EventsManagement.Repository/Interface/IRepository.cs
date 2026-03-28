@@ -1,4 +1,6 @@
-﻿namespace EventsManagement.Repository.Interface;
+﻿using EventsManagement.Domain.Dto;
+
+namespace EventsManagement.Repository.Interface;
 
 using System.Linq.Expressions;
 using EventsManagement.Domain.Common;
@@ -19,4 +21,14 @@ public interface IRepository<T> where T : BaseEntity
         Expression<Func<T, bool>>? predicate = null,
         Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
         Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null);
+    
+    public Task<PaginatedResult<E>> GetAllPagedAsync<E>(
+        Expression<Func<T, E>> selector,
+        int pageNumber,
+        int pageSize,
+        Expression<Func<T, bool>>? predicate = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null,
+        bool asNoTracking = false);
+
 }

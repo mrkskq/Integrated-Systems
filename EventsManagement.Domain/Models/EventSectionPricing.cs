@@ -8,8 +8,8 @@ public class EventSectionPricing : BaseAuditableEntity<EventsAppUser>
     public string Currency { get; set; } = "USD";
     
     public Guid EventId { get; set; }
-    public Event Event { get; set; } = null!;
+    public virtual Event Event { get; set; } = null!;
     
     public Guid SectionId { get; set; }
-    public Section Section { get; set; } = null!;
+    public virtual Section Section { get; set; } = null!;
 }

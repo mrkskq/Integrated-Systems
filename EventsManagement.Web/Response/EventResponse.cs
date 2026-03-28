@@ -6,7 +6,7 @@ public record EventResponse(
     string BannerUrl,
     DateTime StartDate,
     DateTime EndDate,
-    string VenueName,
-    string VenueCity,
-    string VenueCountry
+    string? VenueName,
+    string? VenueCity,
+    string? VenueCountry
     );

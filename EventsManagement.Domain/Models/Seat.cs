@@ -10,7 +10,7 @@ public class Seat : BaseEntity
     public bool IsAccessible { get; set; }
     
     public Guid SectionId { get; set; }
-    public Section Section { get; set; } = null!;
+    public virtual Section Section { get; set; } = null!;
     
     public virtual ICollection<SeatReservation> SeatReservations { get; set; } = new List<SeatReservation>();
 }

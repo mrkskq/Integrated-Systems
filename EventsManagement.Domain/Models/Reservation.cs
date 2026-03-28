@@ -10,10 +10,10 @@ public class Reservation : BaseAuditableEntity<EventsAppUser>
     public ReservationStatus Status { get; set; }
     
     public Guid EventId { get; set; }
-    public Event Event { get; set; } = null!;
+    public virtual Event Event { get; set; } = null!;
 
     public string UserId { get; set; } = null!;
-    public EventsAppUser User { get; set; } = null!;
+    public virtual EventsAppUser User { get; set; } = null!;
     
     public virtual ICollection<SeatReservation> SeatReservations { get; set; } = new List<SeatReservation>();
 }

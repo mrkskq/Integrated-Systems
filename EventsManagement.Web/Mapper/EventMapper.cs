@@ -25,6 +25,13 @@ public class EventMapper
         var result = await _eventService.GetAllAsync();
         return result.ToResponse();
     }
+    
+    public async Task<PaginatedResponse<EventResponse>> PaginatedGetAllAsync(PaginatedRequest request)
+    {
+        var result = await _eventService.GetAllPagedAsync(request.PageNumber, request.PageSize);
+        return result.ToPaginatedResponse(e => e.ToResponse());
+    }
+
 
     public async Task<EventResponse> InsertAsync(EventRequest request)
     {

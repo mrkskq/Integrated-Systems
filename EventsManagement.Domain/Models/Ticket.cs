@@ -10,11 +10,11 @@ public class Ticket : BaseAuditableEntity<EventsAppUser>
     public TicketStatus Status { get; set; }
     
     public string UserId { get; set; } = null!;
-    public EventsAppUser User { get; set; } = null!;
+    public virtual EventsAppUser User { get; set; } = null!;
     
     public Guid EventId { get; set; }
-    public Event Event { get; set; } = null!;
+    public virtual Event Event { get; set; } = null!;
     
     public Guid SeatReservationId { get; set; }
-    public SeatReservation SeatReservation { get; set; } = null!;
+    public virtual SeatReservation SeatReservation { get; set; } = null!;
 }

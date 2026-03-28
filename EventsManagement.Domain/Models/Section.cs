@@ -8,7 +8,7 @@ public class Section : BaseEntity
     public int Capacity { get; set; }
     
     public Guid VenueId { get; set; }
-    public Venue Venue { get; set; } = null!;
+    public virtual Venue Venue { get; set; } = null!;
     
     public virtual ICollection<EventSectionPricing> EventSectionPricings { get; set; } = new List<EventSectionPricing>();
     public virtual ICollection<Seat> Seats { get; set; } = new List<Seat>();

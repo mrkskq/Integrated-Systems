@@ -15,9 +15,9 @@ public static class EventsExtensions
             e.BannerUrl,
             e.StartDate,
             e.EndDate,
-            e.Venue.Name,
-            e.Venue.City,
-            e.Venue.Country
+            e.Venue?.Name,
+            e.Venue?.City,
+            e.Venue?.Country
         );
     }
 

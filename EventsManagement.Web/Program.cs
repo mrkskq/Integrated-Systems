@@ -17,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
+/*
 builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
     {
         options.UseSqlServer(connectionString);
@@ -24,6 +25,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
         sp.GetService<AuditInterceptor>();
     }
 );
+*/
 
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
