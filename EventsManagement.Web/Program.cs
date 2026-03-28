@@ -1,4 +1,9 @@
 using EventsManagement.Repository;
+using EventsManagement.Repository.Implementation;
+using EventsManagement.Repository.Interface;
+using EventsManagement.Service.Implementation;
+using EventsManagement.Service.Interface;
+using EventsManagement.Web.Interceptor;
 using EvolveDb;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.SqlClient;
@@ -11,13 +16,35 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
+    {
+        options.UseSqlServer(connectionString);
+        options.UseLazyLoadingProxies();
+        sp.GetService<AuditInterceptor>();
+    }
+);
+
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IVenueService, VenueService>();
+builder.Services.AddScoped<ICurrentUser, CurrentUser>();
+
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpContextAccessor();
+
 
 try
 {

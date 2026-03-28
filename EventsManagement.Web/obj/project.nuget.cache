@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FvGVJnbaavU=",
+  "dgSpecHash": "8hFetiLIcfY=",
   "success": true,
   "projectFilePath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Web\\EventsManagement.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anama\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\anama\\.nuget\\packages\\castle.core\\5.2.1\\castle.core.5.2.1.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\evolve\\3.2.0\\evolve.3.2.0.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\10.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.10.0.5.nupkg.sha512",
@@ -27,6 +28,7 @@
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.5\\microsoft.entityframeworkcore.abstractions.10.0.5.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.5\\microsoft.entityframeworkcore.analyzers.10.0.5.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.5\\microsoft.entityframeworkcore.design.10.0.5.nupkg.sha512",
+    "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.proxies\\10.0.5\\microsoft.entityframeworkcore.proxies.10.0.5.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.5\\microsoft.entityframeworkcore.relational.10.0.5.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\10.0.5\\microsoft.entityframeworkcore.sqlite.10.0.5.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\10.0.5\\microsoft.entityframeworkcore.sqlite.core.10.0.5.nupkg.sha512",

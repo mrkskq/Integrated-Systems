@@ -13,3 +13,4 @@ C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Reposito
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Repository\obj\Debug\net10.0\refint\EventsManagement.Repository.dll
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Repository\obj\Debug\net10.0\EventsManagement.Repository.pdb
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Repository\obj\Debug\net10.0\ref\EventsManagement.Repository.dll
+C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Repository\obj\Debug\net10.0\EventsManagement.Repository.sourcelink.json
