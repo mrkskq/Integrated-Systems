@@ -35,6 +35,27 @@ public class EventsController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Insert([FromBody] EventRequest request)
+    {
+        var result = await _eventMapper.InsertAsync(request);
+        return Ok(result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] EventRequest request)
+    {
+        var result = _eventMapper.UpdateAsync(id, request);
+        return Ok(result);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    {
+        var result = await _eventMapper.DeleteAsync(id);
+        return Ok(result);
+    }
     
     [HttpGet("paged")]
     public async Task<PaginatedResponse<EventResponse>> Paged([FromQuery] PaginatedRequest request)

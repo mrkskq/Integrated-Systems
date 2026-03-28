@@ -327,3 +327,4 @@ C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Web\obj\
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Web\bin\Debug\net10.0\Castle.Core.dll
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Web\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Web\obj\Debug\net10.0\EventsManagement.Web.sourcelink.json
+C:\Users\anama\Desktop\FINKI\Rider-IS\EventsManagement\EventsManagement.Web\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -22,7 +22,8 @@ public class EventMapper
 
     public async Task<List<EventResponse>> GetAll()
     {
-        var result = await _eventService.GetAllAsync();
+       // var result = await _eventService.GetAllAsync();
+        var result = await _eventService.GetAllEventsAsyncWithEventPricingUsingInclude();
         return result.ToResponse();
     }
     
@@ -45,5 +46,11 @@ public class EventMapper
         var dto = request.ToDto();
         var result = await _eventService.UpdateAsync(id, dto);
         return result.ToResponse();
+    }
+
+    public async Task<EventResponse> DeleteAsync(Guid id)
+    {
+        var result = await _eventService.DeleteByIdAsync(id);
+        return result?.ToResponse();
     }
 }
