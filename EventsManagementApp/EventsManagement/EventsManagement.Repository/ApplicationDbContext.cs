@@ -1,0 +1,26 @@
+﻿using EventsManagement.Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+//namespace EventsManagement.Web.Data;
+
+namespace EventsManagement.Repository;
+
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext(options)
+{
+    public DbSet<EventsAppUser> Users { get; set; }
+    public DbSet<Venue> Venues { get; set; }
+    public DbSet<Section> Sections { get; set; }
+    public DbSet<Seat> Seats { get; set; }
+    public DbSet<Event> Events { get; set; }
+    public DbSet<EventSectionPricing> EventSectionPricings { get; set; }
+    public DbSet<Reservation> Reservations { get; set; }
+    public DbSet<SeatReservation> SeatReservations { get; set; }
+    public DbSet<Ticket> Tickets { get; set; }
+
+}
+
+
+// Premesti go ApplicationDbContext.cs i Migrations folderot
+// od Web.Data vo Repository i smeni namespace segde kaj sho e crveno
+// namespace EventsManagement.Web.Data; -> namespace EventsManagement.Repository;

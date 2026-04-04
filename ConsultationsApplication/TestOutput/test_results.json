@@ -1,0 +1,425 @@
+[
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_ReturnNullForNonExistingId",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:47.0941292+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_GetPagedResults",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:47.6704523+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_UpdateAttendance",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:48.2615477+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_DeleteAttendance",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:48.8337254+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_UpdateReasonPath",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:49.3894945+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_ReturnAllAttendances",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:49.9118385+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_CreateAttendance",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:50.4449203+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_GetAttendanceById",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:50.9675649+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceServiceIntegrationTests.Service_Should_IncrementConsultationStudentsOnCreate",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:51.5004567+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_GetConsultationById",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:52.1004987+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_FilterByDate",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:52.5859406+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_ReturnNullForNonExistingId",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:53.0394689+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_GetPagedResults",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:53.5198299+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_FilterByRoomNameAndDate",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:53.988475+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_DeleteConsultation",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:54.4862368+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_ReturnAllConsultations",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:54.9385732+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_FilterByRoomName",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:55.3965008+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_UpdateConsultation",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:55.8604605+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_CreateConsultation",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:56.3100228+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationServiceIntegrationTests.Service_Should_ThrowForNonExistingIdNotNull",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationService",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:56.7788243+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ExtensionReflectionTests.ConsultationExtensions_ToResponse_ShouldMapAllFields",
+    "StudentId": "233002",
+    "TestCategory": "Extensions",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:56.7821428+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "ExtensionReflectionTests.AttendanceExtensions_ToResponse_ShouldMapAllFields",
+    "StudentId": "233002",
+    "TestCategory": "Extensions",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:56.7832094+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "MapperReflectionTests.ConsultationMapper_DeleteAsync_ShouldReturnDeletedEntity",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:57.2167993+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.AttendanceMapper_UploadReasonAsync_ShouldReturnCorrectFields",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:57.6662571+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.ConsultationMapper_GetAllAsync_ShouldReturnList",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:58.1103318+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.AttendanceMapper_GetAllByConsultationIdAsync_ShouldReturnList",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:58.5760087+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.AttendanceMapper_MarkAsAbsentAsync_ShouldSucceed",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:59.0430315+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.AttendanceMapper_RegisterAsync_ShouldReturnCorrectFields",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:59.4983635+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.ConsultationMapper_UpdateAsync_ShouldReturnUpdatedFields",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:13:59.942808+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "MapperReflectionTests.ConsultationMapper_InsertAsync_ShouldReturnCorrectFields",
+    "StudentId": "233002",
+    "TestCategory": "Mappers",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:00.3865733+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceControllerTests.MarkAsAbsent_ShouldReturn200",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:01.6987986+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "AttendanceControllerTests.Register_ShouldIncrementConsultationStudentCount",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:03.3862292+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceControllerTests.GetByConsultation_ShouldReturnJsonArrayWithExpectedFields",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:04.8957469+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "AttendanceControllerTests.Register_ValidRequest_ShouldCreateAndReturnFields",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:06.4239188+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "AttendanceControllerTests.GetByConsultation_EmptyConsultation_ShouldReturnEmptyArray",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:07.8984911+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "AttendanceControllerTests.Delete_ValidId_ShouldReturn200",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:09.3424898+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "AttendanceControllerTests.UploadCancelationReason_ShouldReturn200",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:10.8675824+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "AttendanceControllerTests.Delete_InvalidId_ShouldReturnError",
+    "StudentId": "233002",
+    "TestCategory": "AttendanceController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:12.369047+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationControllerTests.GetAll_ShouldReturnJsonArrayWithExpectedFields",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:13.9613015+02:00",
+    "ErrorMessage": null,
+    "Points": 8
+  },
+  {
+    "TestName": "ConsultationControllerTests.Register_ShouldIncrementCount",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:15.4636054+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationControllerTests.Delete_InvalidId_ShouldReturnError",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:16.9288115+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationControllerTests.Delete_ValidId_ShouldDeleteAndReturn",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:18.3834996+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "ConsultationControllerTests.Update_InvalidId_ShouldReturnError",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:19.8296874+02:00",
+    "ErrorMessage": null,
+    "Points": 5
+  },
+  {
+    "TestName": "ConsultationControllerTests.Update_ValidRequest_ShouldUpdateAndReturnFields",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:21.2817735+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "ConsultationControllerTests.Register_ValidRequest_ShouldCreateAndReturnFields",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:22.7524913+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "ConsultationControllerTests.GetPaged_ShouldReturnPaginatedResponse",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:24.3045834+02:00",
+    "ErrorMessage": null,
+    "Points": 10
+  },
+  {
+    "TestName": "ConsultationControllerTests.GetAll_WithRoomFilter_ShouldFilterResults",
+    "StudentId": "233002",
+    "TestCategory": "ConsultationController",
+    "IsPassed": true,
+    "ExecutedAt": "2026-04-04T20:14:25.7778453+02:00",
+    "ErrorMessage": null,
+    "Points": 7
+  }
+]
