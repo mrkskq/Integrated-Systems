@@ -1,4 +1,5 @@
-﻿using EventsManagement.Web.Mapper;
+﻿using EventsManagement.Repository;
+using EventsManagement.Web.Mapper;
 using EventsManagement.Web.Request;
 using EventsManagement.Web.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace EventsManagement.Web.Controllers;
 public class EventsController : ControllerBase
 {
     private readonly EventMapper _eventMapper;
+    public ApplicationDbContext _context;
 
-    public EventsController(EventMapper eventMapper)
+    public EventsController(EventMapper eventMapper, ApplicationDbContext context)
     {
         _eventMapper = eventMapper;
+        _context = context;
     }
     
     [HttpGet]

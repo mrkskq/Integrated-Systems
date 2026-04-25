@@ -17,6 +17,33 @@ namespace EventsManagement.Repository
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
 
+            modelBuilder.Entity("EventsManagement.Domain.Models.EtlSyncLog", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ErrorMessage")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("JobName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Success")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EtlSyncLogs");
+                });
+
             modelBuilder.Entity("EventsManagement.Domain.Models.Event", b =>
                 {
                     b.Property<Guid>("Id")
@@ -30,6 +57,9 @@ namespace EventsManagement.Repository
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("EndDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("EventImageId")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("StartDate")
@@ -49,6 +79,8 @@ namespace EventsManagement.Repository
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventImageId");
 
                     b.HasIndex("UserId");
 
@@ -97,6 +129,32 @@ namespace EventsManagement.Repository
                     b.HasIndex("SectionId");
 
                     b.ToTable("EventSectionPricings");
+                });
+
+            modelBuilder.Entity("EventsManagement.Domain.Models.EventsImages", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("Size")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EventsImages");
                 });
 
             modelBuilder.Entity("EventsManagement.Domain.Models.Reservation", b =>
@@ -159,8 +217,9 @@ namespace EventsManagement.Repository
                     b.Property<int>("Number")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Row")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Row")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<Guid>("SectionId")
                         .HasColumnType("TEXT");
@@ -542,6 +601,10 @@ namespace EventsManagement.Repository
 
             modelBuilder.Entity("EventsManagement.Domain.Models.Event", b =>
                 {
+                    b.HasOne("EventsManagement.Domain.Models.EventsImages", "EventImage")
+                        .WithMany()
+                        .HasForeignKey("EventImageId");
+
                     b.HasOne("EventsManagement.Domain.Models.EventsAppUser", "User")
                         .WithMany("Events")
                         .HasForeignKey("UserId");
@@ -549,6 +612,8 @@ namespace EventsManagement.Repository
                     b.HasOne("EventsManagement.Domain.Models.Venue", "Venue")
                         .WithMany("Events")
                         .HasForeignKey("VenueId");
+
+                    b.Navigation("EventImage");
 
                     b.Navigation("User");
 

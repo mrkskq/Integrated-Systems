@@ -1,6 +1,8 @@
-﻿namespace EventsManagement.Domain.Models;
+﻿using EventsManagement.Domain.Common;
 
-public class EventsImages
+namespace EventsManagement.Domain.Models;
+
+public class EventsImages : BaseEntity // od aud 5 zaboraeno
 {
     public string FileName { get; set; }
     public string ContentType { get; set; }

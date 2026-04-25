@@ -1,4 +1,5 @@
-﻿using EventsManagement.Service.Interface;
+﻿using EventsManagement.Domain.Models;
+using EventsManagement.Service.Interface;
 
 namespace EventsManagement.Web.Interceptor;
 
@@ -22,7 +23,7 @@ public class AuditInterceptor : SaveChangesInterceptor
     {
         var context = eventData.Context!;
         var entries = context.ChangeTracker
-            .Entries<BaseAuditableEntity<string>>();
+            .Entries<BaseAuditableEntity<EventsAppUser>>();
 
         foreach (var entry in entries)
         {
@@ -44,5 +45,36 @@ public class AuditInterceptor : SaveChangesInterceptor
         }
 
         return base.SavingChanges(eventData, result);
+    }
+    
+    public override ValueTask<InterceptionResult<int>> SavingChangesAsync(
+        DbContextEventData eventData,
+        InterceptionResult<int> result,
+        CancellationToken cancellationToken = default)
+    {
+        var context = eventData.Context!;
+        var entries = context.ChangeTracker
+            .Entries<BaseAuditableEntity<EventsAppUser>>();
+
+        foreach (var entry in entries)
+        {
+            var now  = DateTime.UtcNow;
+            var user = _currentUser.GetUserId() ?? "system";
+
+            if (entry.State == EntityState.Added)
+            {
+                entry.Entity.CreatedById      = user;
+                entry.Entity.DateCreated      = now;
+                entry.Entity.LastModifiedById  = user;
+            }
+
+            if (entry.State == EntityState.Modified)
+            {
+                entry.Entity.LastModifiedById  = user;
+                entry.Entity.DateLastModified  = now;
+            }
+        }
+
+        return base.SavingChangesAsync(eventData, result, cancellationToken);
     }
 }

@@ -4,7 +4,7 @@ namespace EventsManagement.Domain.Models;
 
 public class Seat : BaseEntity
 {
-    public int Row { get; set; }
+    public string Row { get; set; }
     public int Number { get; set; }
     public string? Label { get; set; } 
     public bool IsAccessible { get; set; }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Query;
 
 public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly ApplicationDbContext _context;
+        protected readonly ApplicationDbContext _context;
         private readonly DbSet<T> entites;
 
         public Repository(ApplicationDbContext context)
@@ -72,7 +72,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
             return await query.Select(selector).FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<E>> GetAllAsync<E>(Expression<Func<T, E>> selector,
+        public async Task<IEnumerable<E>> GetAllAsync<E>(Expression<Func<T, E>> selector = null,
             Expression<Func<T, bool>>? predicate = null,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null)
@@ -94,7 +94,13 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
                 orderBy(query);
             }
 
-            return await query.Select(selector).ToListAsync();
+            //return await query.Select(selector).ToListAsync();
+            if (selector != null)
+            {
+                return await query.Select(selector).ToListAsync();
+            }
+
+            return (IEnumerable<E>)await query.ToListAsync();
         }
 
         public async Task<PaginatedResult<E>> GetAllPagedAsync<E>(

@@ -4,7 +4,9 @@ using EventsManagement.Repository.Implementation;
 using EventsManagement.Repository.Interface;
 using EventsManagement.Service.Implementation;
 using EventsManagement.Service.Interface;
+using EventsManagement.Service.Jobs;
 using EventsManagement.Web.Interceptor;
+using EventsManagement.Web.Mapper;
 using EvolveDb;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -12,6 +14,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Quartz;
 
 //using EventsManagement.Web.Data;
 
@@ -34,14 +37,61 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+
 builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddScoped<IVenueService, VenueService>();
 builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 
 
+builder.Services.AddScoped<IVenueRepository, VenueRepository>();
+builder.Services.AddScoped<ILegacyVenueRepository, LegacyVenueRepository>();
+builder.Services.AddScoped<AuditInterceptor>();
+builder.Services.AddScoped<ReservationMapper>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddScoped<VenueEtlService>();
+
+
+// tie sho nasledvet od BackgroundService se so AddHostedService
+builder.Services.AddHostedService<ReservationCleanupBackgroundService>();
+builder.Services.AddHostedService<LegacyDbEtlBackgroundService>();
+
+
+// za Quartz sho nasledvit od IJob e vaka
+builder.Services.AddQuartzHostedService();
+
+builder.Services.AddQuartz(options =>
+{
+    var jobKey = new JobKey("reservation-cleanup", "maintenance");
+    options.AddJob<QuartzReservationCleanupJob>(o => o.WithIdentity(jobKey));
+
+    options.AddTrigger(o =>
+    {
+        o.ForJob(jobKey).WithIdentity("reservation-cleanup-trigger")
+            .WithCronSchedule("0 0/1 * * * ?")
+            .WithDescription("Expires unpaid reservations");
+    });
+});
+
+
+
+/*
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+*/
+
+builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
+    {
+        options.UseSqlite(connectionString);
+        options.AddInterceptors(sp.GetRequiredService<AuditInterceptor>());
+    }
+);
+
+builder.Services.AddDbContext<LegacyApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration
+            .GetConnectionString("LegacyVenueDb")));
+
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -91,6 +141,7 @@ builder.Services.AddAuthentication(options =>
     });
 */
 
+/*
 try
 {
     using var cnx = new SqliteConnection(connectionString);
@@ -110,6 +161,7 @@ catch (Exception ex)
     Console.WriteLine(ex);
     throw;
 }
+*/
 
 
 var app = builder.Build();
