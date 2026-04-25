@@ -21,4 +21,7 @@ public interface IEventService
     Task<List<Event>> GetAllEventsAsyncWithEventPricingWithoutInclude();
     Task<List<Event>> GetAllEventsAsyncWithEventPricingUsingInclude();
 
+    
+    public Task<Event> UploadImageById(Guid eventId, string fileName, string contentType, int size, byte[] data);
+    public Task<Event> UpdateImagePathByIdAsync(Guid eventId, string path);
 }

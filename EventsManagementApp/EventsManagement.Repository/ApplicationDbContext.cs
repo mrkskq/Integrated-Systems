@@ -13,6 +13,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Section> Sections { get; set; }
     public DbSet<Seat> Seats { get; set; }
     public DbSet<Event> Events { get; set; }
+    // public DbSet<EventsImages> EventsImages { get; set; }
     public DbSet<EventSectionPricing> EventSectionPricings { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
     public DbSet<SeatReservation> SeatReservations { get; set; }

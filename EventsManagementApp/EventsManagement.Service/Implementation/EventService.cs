@@ -171,4 +171,29 @@ public class EventService : IEventService
         
         return events.ToList();
     }
+    
+    public async Task<Event> UploadImageById(Guid eventId, string fileName, string contentType, int size, byte[] data)
+    {
+        var eventToUpdate = await GetByIdNotNullAsync(eventId);
+
+        var image = new EventsImages()
+        {
+            FileName = fileName,
+            ContentType = contentType,
+            Data = data,
+            Size = size
+        };
+
+        eventToUpdate.EventImage = image;
+        return await _repository.UpdateAsync(eventToUpdate);
+    }
+
+    public async Task<Event> UpdateImagePathByIdAsync(Guid eventId, string path)
+    {
+        var eventToUpdate = await GetByIdNotNullAsync(eventId);
+
+        eventToUpdate.BannerUrl = path;
+        
+        return await _repository.UpdateAsync(eventToUpdate);
+    }
 }

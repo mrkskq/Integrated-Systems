@@ -8,10 +8,12 @@ namespace EventsManagement.Web.Mapper;
 public class EventMapper
 {
     private readonly IEventService _eventService;
+    private readonly IFileUploadService _fileUploadService;
 
-    public EventMapper(IEventService eventService)
+    public EventMapper(IEventService eventService, IFileUploadService fileUploadService)
     {
         _eventService = eventService;
+        _fileUploadService = fileUploadService;
     }
 
     public async Task<EventResponse?> GetById(Guid id)
@@ -53,4 +55,37 @@ public class EventMapper
         var result = await _eventService.DeleteByIdAsync(id);
         return result?.ToResponse();
     }
+    
+    public async Task<EventResponse> UploadImageByIdAsync(Guid eventId, IFormFile file)
+    {
+        using var memoryStream = new MemoryStream();
+        await file.CopyToAsync(memoryStream);
+
+
+        var result = await _eventService.UploadImageById(
+            eventId,
+            fileName: file.FileName,
+            contentType: file.ContentType,
+            size: (int) file.Length,
+            data: memoryStream.ToArray());
+        
+        
+        return result.ToResponse();
+    }
+    
+    public async Task<EventResponse> UploadImageByIdInFileSystemAsync(Guid eventId, IFormFile file)
+    {
+        using var ms = new MemoryStream();
+        await file.CopyToAsync(ms);
+
+        var path = await _fileUploadService.UploadFileAsync(
+            ms.ToArray(),
+            file.FileName
+        );
+
+        var result = await _eventService.UpdateImagePathByIdAsync(eventId, path);
+
+        return result.ToResponse();
+    }
+
 }

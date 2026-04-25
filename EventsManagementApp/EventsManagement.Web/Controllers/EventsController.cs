@@ -63,5 +63,17 @@ public class EventsController : ControllerBase
         return await _eventMapper.PaginatedGetAllAsync(request);
     }
 
+    [HttpPost("upload-image/{eventId}")]
+    public async Task<IActionResult> UploadImageByIdAsync([FromRoute] Guid eventId, [FromForm] IFormFile file)
+    {
+        var result = await _eventMapper.UploadImageByIdAsync(eventId, file);
+        return Ok(result);
+    }
     
+    [HttpPost("upload-image-fs/{eventId}")]
+    public async Task<IActionResult> UploadImageByIdInFileSystemAsync([FromRoute] Guid eventId, [FromForm] IFormFile file)
+    {
+        var result = await _eventMapper.UploadImageByIdInFileSystemAsync(eventId, file);
+        return Ok(result);
+    }
 }

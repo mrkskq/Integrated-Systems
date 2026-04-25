@@ -2384,11 +2384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Repository\\EventsManagement.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Repository\\EventsManagement.Repository.csproj",
       "projectName": "EventsManagement.Repository",
-      "projectPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Repository\\EventsManagement.Repository.csproj",
+      "projectPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Repository\\EventsManagement.Repository.csproj",
       "packagesPath": "C:\\Users\\anama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Repository\\obj\\",
+      "outputPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anama\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2403,8 +2403,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Domain\\EventsManagement.Domain.csproj": {
-              "projectPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Domain\\EventsManagement.Domain.csproj"
+            "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Domain\\EventsManagement.Domain.csproj": {
+              "projectPath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Domain\\EventsManagement.Domain.csproj"
             }
           }
         }

@@ -12,6 +12,9 @@ public class Event : BaseEntity
     public EventStatus Status { get; set; }
     public string? BannerUrl { get; set; }
     
+    public Guid? EventImageId { get; set; }
+    public virtual EventsImages? EventImage { get; set; }
+    
     public Guid? VenueId { get; set; }
     public virtual Venue Venue { get; set; } = null!;
     

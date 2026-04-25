@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UPFZMD9V0T8=",
+  "dgSpecHash": "Zfl2l+0RUYY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagement\\EventsManagement.Service\\EventsManagement.Service.csproj",
+  "projectFilePath": "C:\\Users\\anama\\Desktop\\FINKI\\Rider-IS\\EventsManagementApp\\EventsManagement.Service\\EventsManagement.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anama\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\anama\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
